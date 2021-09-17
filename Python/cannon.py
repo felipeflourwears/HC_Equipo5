@@ -13,6 +13,7 @@ from random import randrange
 from turtle import *
 from freegames import vector
 
+
 ball = vector(-200, -200)
 speed = vector(0, 0)
 targets = []
@@ -63,7 +64,6 @@ def move():
     # Make a copy of the existing target list before redrawing
     dupe = targets.copy()
     targets.clear()
-
     # Detect if the bullet hits a target
     for target in dupe:
         if abs(target - ball) > 13:
