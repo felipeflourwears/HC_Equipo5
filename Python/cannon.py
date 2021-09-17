@@ -45,6 +45,7 @@ def draw():
     update()
 
 def move():
+    cont=0
     "Move ball and targets."
     # Generate a new target at random times
     if randrange(40) == 0:
@@ -67,8 +68,9 @@ def move():
     # Detect if the bullet hits a target
     for target in dupe:
         if abs(target - ball) > 13:
+            cont=cont+1
             targets.append(target)
-
+    print(cont)
     draw()
 
     # Detect when a target reaches the left side
