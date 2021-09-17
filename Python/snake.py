@@ -52,8 +52,13 @@ def move():
 
     square(food.x, food.y, 9, 'green')
     update()
-    ontimer(move, 100)
-
+  
+    f=len(snake)
+    if f<10:
+        ontimer(move, 100)
+    else:
+        ontimer(move,50)
+        
 setup(420, 420, 370, 0)
 hideturtle()
 tracer(False)
